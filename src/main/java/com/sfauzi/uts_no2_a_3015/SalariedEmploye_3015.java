@@ -8,19 +8,15 @@ package com.sfauzi.uts_no2_a_3015;
  *
  * @author S FAUZI
  */
-public class SalariedEmploye_3015 {
-    String nama_3015;
-    int nip_3015;
-    double upahmingguan_3015, gaji_3015;
+public class SalariedEmploye_3015 extends Employee_3015{
     
-    public void tampilDataSalaried_Employee_3015(){
-        System.out.println("Nama                : "+nama_3015);
-        System.out.println("NIP                 : "+nip_3015);
-        System.out.println("Upah Mingguan       : "+upahmingguan_3015);
-    }
-    public double InfogajiSalaried_3015(double upah_mingguan_3015){
-        double gaji_3015 = upah_mingguan_3015;
-        return gaji_3015;
+    public SalariedEmploye_3015(){
+        
     }
     
+    public void TampilData_3015(){
+        System.out.println("Salaried Employee");
+        Tampil();
+        System.out.println("Total Gaji: " + GajiPokok_3015);
+    }
 }

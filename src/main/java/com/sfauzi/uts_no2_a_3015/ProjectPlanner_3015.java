@@ -8,23 +8,23 @@ package com.sfauzi.uts_no2_a_3015;
  *
  * @author S FAUZI
  */
-public class ProjectPlanner_3015 {
-    String nama_3015;
-    int nip_3015, total_hasil_proyek_3015;
-    double gaji_pokok_3015, komisi_3015, gaji_3015, pajak_3015;
+public class ProjectPlanner_3015 extends Employee_3015 {
+    public float Komisi_3015;
+    public float TotalHasilProyek_3015;
+    public double Totalgaji_3015;
     
-    public void tampilDataProject_Planner_3015(){
-        System.out.println("Nama                : "+nama_3015);
-        System.out.println("NIP                 : "+nip_3015);
-        System.out.println("Total Hasil Proyek  : "+total_hasil_proyek_3015);
-        System.out.println("Gaji Pokok          : "+gaji_pokok_3015);
-        System.out.println("Komisi              : "+komisi_3015);
+    public ProjectPlanner_3015(){
         
     }
-        public double InfogajiProject_3015(){
-        pajak_3015 = (0.05 * gaji_pokok_3015);
-        gaji_3015 = gaji_pokok_3015 + (komisi_3015 * total_hasil_proyek_3015) - pajak_3015; 
-        return gaji_3015;
-        
-        }
+            
+    public double TotalGaji_3015(){
+        Totalgaji_3015 = GajiPokok_3015 + (Komisi_3015 * TotalHasilProyek_3015) - (GajiPokok_3015*5/100);
+        return Totalgaji_3015;
+    }
+    
+    public void TampilData_3015(){
+        System.out.println("Project Plannner");
+        Tampil();
+        System.out.println("Total Gaji: " + Totalgaji_3015);
+    }
 }
